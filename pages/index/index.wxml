@@ -1,0 +1,32 @@
+<wxs src="./touchmove.wxs" module="handleTouch"></wxs>
+<view class="container">
+	<!-- style="z-index: {{cssStatus ? 1 : -1}};" -->
+	<view class="box">
+		<block wx:for="{{list}}" wx:key="id">
+			<view class="li an{{item.id}}" wx:if="{{!item.status}}" wx:key="{{item.id}}" style="top: {{item.top}}px;left:{{item.left}}rpx;width:{{item.width-5}}px;height:{{item.height-5}}px;">
+				<image src="{{item.img}}"></image>
+			</view>
+		</block>
+		<view style="font-size:120rpx;height:100%;width: 100%;display: flex;align-items: center;justify-content: center;">海报</view>
+	</view>
+	<view class="content {{cssStatus?'cssStatus':''}}" style="margin-bottom: {{windowHeight}}px;" animation="{{animation}}">
+		<!-- <view class="top" bind:touchstart="{{handleTouch.handleTouchStart}}" bind:touchmove="{{handleTouch.handleTouchEnd}}"> -->
+		<view class="top" bindtouchstart="touchstartX" bindtouchmove="touchmoveX" bindtouchend="touchendX">
+			<image mode="heightFix" src="../../images/logo.jpg" class="logo"></image>
+			<view class="">下拉</view>
+			<image src="../../images/down.png" class="down"></image>
+		</view>
+		<view class="content-c">
+			<view wx:if="{{cssStatus}}" bindtap="close" style="width: 100%;height: 50rpx; text-align: center;">收起</view>
+			<view class="box1">
+				<text>佩戴时间</text>
+				<!-- <text>\n</text>
+        <text>时间</text> -->
+			</view>
+			<view class="btn">
+				<view class="btn1">款式名称</view>
+				<view class="btn2">用户自定义的一句话</view>
+			</view>
+		</view>
+	</view>
+</view>

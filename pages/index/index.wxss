@@ -1,0 +1,130 @@
+page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  
+}
+.box{
+  width: 750rpx;
+  height: 65%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #658f69;
+  overflow: hidden;
+}
+.box .li {
+  position: fixed;
+  z-index: 100;
+  /* background-color: red; */
+}
+.li image{
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  
+}
+.content.cssStatus {
+  flex-direction: row;
+}
+.content .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cssStatus .top {
+  display: none;
+}
+.top .logo {
+  height: 120rpx;
+}
+.top .down {
+  width: 50rpx;
+  height: 50rpx;
+}
+.content .content-c {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.cssStatus .content-c {
+  flex-direction: row;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.content .box1 {
+  width: 500rpx;
+  height: 600rpx;
+  background-color: #658f69;
+  font-size: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 18rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.cssStatus .box1 {
+  width: 44%;
+  height: 68%;
+  font-size: 80rpx;
+}
+.cssStatus .btn {
+  width: 56%;
+  height: 80%;
+  
+}
+.content .btn1 {
+  margin: 50rpx auto;
+  background-color: #658f69;
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  font-size: 34rpx;
+}
+.content .btn2 {
+  /* margin: 50rpx 0; */
+  margin: 0 auto;
+  background-color: #658f69;
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  font-size: 34rpx;
+}
+.cssStatus .btn .btn1 {
+  width: 70%;
+}
+.cssStatus .btn .btn2 {
+  width: 90%;
+}
